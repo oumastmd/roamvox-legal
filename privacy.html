@@ -15,13 +15,16 @@
 <h1>Roamvox — Privacy Policy</h1>
 <p><em>Last updated: August 9, 2026</em></p>
 
-<p>Roamvox is a voice translation app built to work offline. This policy explains what happens to your data when you use it.</p>
+<p>Roamvox is a voice translation app that works offline and, when you are connected, can use an online AI translation service for better quality. This policy explains what happens to your data when you use it.</p>
 
 <h2>Data we do not collect</h2>
-<p>Roamvox does not collect, store, or transmit your voice recordings, translations, or translation history to any server. There is no user account, no login, and no analytics or crash-reporting SDK in the app.</p>
+<p>Roamvox does not collect or store your data on any server of its own, and never sends your voice recordings anywhere. When you are online, only the recognized text of what you said is sent for translation (see "Online translation" below). Your translation history is never uploaded. There is no user account, no login, and no analytics or crash-reporting SDK in the app.</p>
 
 <h2>How translation works</h2>
 <p>Speech recognition and text-to-speech run using your device's built-in system services. Translation runs on-device using Google ML Kit's on-device translation models. The first time you use a language pair, the app downloads a translation model package for that language pair directly from Google's ML Kit infrastructure to your device — after that, translation works fully offline. This download uses your device's standard network connection; Roamvox itself does not operate any server and does not receive or log this traffic.</p>
+
+<h2>Online translation</h2>
+<p>When your device has an internet connection, Roamvox sends the text to be translated (and the source and target language) to OpenRouter (openrouter.ai), which routes it to an AI language model (currently a Google Gemini model, which may change over time) to produce the translation. No account, device identifier or voice audio is sent, and Roamvox does not keep the text. If you are offline, or the request fails, translation automatically runs on your device with the downloaded language packs. Processing by OpenRouter and the model provider is governed by their own privacy policies.</p>
 
 <h2>Data stored on your device</h2>
 <p>Your translation history and downloaded language packs are stored locally on your device only, using a local database. This data is never uploaded anywhere. Uninstalling the app removes it.</p>
@@ -33,7 +36,7 @@
 </ul>
 
 <h2>Third parties</h2>
-<p>The only third-party component involved is Google ML Kit, which downloads on-device translation models to your device on first use of a language pair. Google's handling of that download traffic is governed by Google's own privacy policy. Roamvox does not share any additional data with Google or anyone else.</p>
+<p>The third-party components involved are Google ML Kit, which downloads on-device translation models to your device on first use of a language pair, and OpenRouter and the AI model provider it routes to (currently Google Gemini, subject to change), which translate text when you are online. Their handling of that traffic is governed by their own privacy policies. Roamvox does not share any additional data with anyone else.</p>
 
 <h2>Children's privacy</h2>
 <p>Roamvox does not knowingly collect any personal information from anyone, including children, because it does not collect personal information at all.</p>
